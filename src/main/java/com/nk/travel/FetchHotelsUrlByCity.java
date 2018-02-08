@@ -6,7 +6,8 @@ import java.io.IOException;
 
 public class FetchHotelsUrlByCity {
 
-	public static void main(String[] args) {
+	static void readCityUrl() {
+		
 		BufferedReader reader;
 		try {
 			reader = new BufferedReader(new FileReader("./input/City_Hotels_URLs.txt"));
@@ -22,5 +23,9 @@ public class FetchHotelsUrlByCity {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+
+	public static void main(String[] args) {
+		readCityUrl();
 	}
 }
